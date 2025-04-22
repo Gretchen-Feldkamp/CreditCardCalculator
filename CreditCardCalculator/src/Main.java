@@ -8,26 +8,45 @@ public class Main
 
 		public static void main(String[] args)
 			{
-				textFileReader();
-
+				textFileReader.main();
+				steps();
 			}
 		
-		public static void textFileReader() throws FileNotFoundException
+		public static boolean steps()
 		{
-			try 
+			int total;
+			int valueOne=0;
+			int valueTwo=0;
+			int[] doubleValues=new int[(individualInt.length)/2];
+			for(int i=0; i<individualInt[].length; i=i+2)
 			{
-			Scanner cardFile = new Scanner(new File("CreditCards.txt"));
-			String[] individualStr = cardFile.next().split("");
-			int[] individualInt = new int[individualStr.length];
-			for(int i=0; i<individualStr[i].length()+1;i++)
+				doubleValues[i]=individualInt[i]*2;
+				if(doubleValues[i]>=10)
 				{
-			individualInt[i] = Integer.parseInt(individualStr[i]);
+					String[] doubleValueConverter= Integer.toString(doubleValues[i]);
+					String[] doubleValueSplit = doubleValueConverter.split("");
+					doubleValues[i]=Integer.parseInt(doubleValueSplit[0])+Integer.parseInt(doubleValueSplit[1]);
 				}
 			}
-			catch(FileNotFoundException x)
+			for(int j=0; j< individualInt[].length;j++)
+			{
+				if(!doubleValues[j]=individualInt[j])
 				{
-					System.out.println("File not found.");
+					individualInt[j]=doubleValues[j];
 				}
+			}
+			for(int x=0; x<individialInt[].length;x++)
+			{
+				total+=individualInt[x];
+			}
+			if(total%10=0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 
 	}
