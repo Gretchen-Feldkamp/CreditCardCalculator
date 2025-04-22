@@ -3,12 +3,12 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 
-public class Main
+public class Runner
 	{
 
 		public static void main(String[] args)
 			{
-				textFileReader.main();
+				Reader.readerMain();
 				steps();
 			}
 		
@@ -17,29 +17,29 @@ public class Main
 			int total;
 			int valueOne=0;
 			int valueTwo=0;
-			int[] doubleValues=new int[(individualInt.length)/2];
-			for(int i=0; i<individualInt[].length; i=i+2)
+			int[] doubleValues=new int[8];
+			for(int i=0; i<Reader.individualInt.length; i=i+2)
 			{
-				doubleValues[i]=individualInt[i]*2;
+				doubleValues[i]=Reader.individualInt[i]*2;
 				if(doubleValues[i]>=10)
 				{
-					String[] doubleValueConverter= Integer.toString(doubleValues[i]);
+					String doubleValueConverter= Integer.toString(doubleValues[i]);
 					String[] doubleValueSplit = doubleValueConverter.split("");
 					doubleValues[i]=Integer.parseInt(doubleValueSplit[0])+Integer.parseInt(doubleValueSplit[1]);
 				}
 			}
-			for(int j=0; j< individualInt[].length;j++)
+			for(int j=0; j< Reader.individualInt.length;j++)
 			{
-				if(!doubleValues[j]=individualInt[j])
+				if(!doubleValues[j]==Reader.individualInt[j])
 				{
-					individualInt[j]=doubleValues[j];
+					Reader.individualInt[j]=doubleValues[j];
 				}
 			}
-			for(int x=0; x<individialInt[].length;x++)
+			for(int x=0; x<Reader.individualInt.length;x++)
 			{
-				total+=individualInt[x];
+				total+=Reader.individualInt[x];
 			}
-			if(total%10=0)
+			if(total%10<=0)
 			{
 				return true;
 			}

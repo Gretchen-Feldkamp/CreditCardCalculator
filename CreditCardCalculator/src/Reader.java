@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class textFileReader {
+public class Reader {
 
 	int[] individualInt;
 	public static int[] main()
