@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Reader {
 
-	int[] individualInt;
-	public static int[] main()
+	static int[] individualInt;
+	public static int[] readerMain()
 		{
 			try 
 			{
@@ -21,7 +21,14 @@ public class Reader {
 				{
 					System.out.println("File not found.");
 				}
-			return individualInt[];
+			try
+				{
+				return individualInt;
+				} catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			return individualInt;
 		}
 	}
 
