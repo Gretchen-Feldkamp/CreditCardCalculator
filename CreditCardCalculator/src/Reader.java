@@ -7,6 +7,7 @@ public class Reader {
 	static int[] individualInt;
 	public static int[] readerMain()
 		{
+			System.out.println("hi");
 			try 
 			{
 			Scanner cardFile = new Scanner(new File("CreditCards.txt"));
@@ -15,6 +16,8 @@ public class Reader {
 			for(int i=0; i<individualStr[i].length()+1;i++)
 				{
 			individualInt[i] = Integer.parseInt(individualStr[i]);
+			System.out.println("hi");
+
 				}
 			}
 			catch(FileNotFoundException x)

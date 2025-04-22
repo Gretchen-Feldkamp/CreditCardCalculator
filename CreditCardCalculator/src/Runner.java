@@ -14,7 +14,7 @@ public class Runner
 		
 		public static boolean steps()
 		{
-			int total;
+			int total=0;
 			int valueOne=0;
 			int valueTwo=0;
 			int[] doubleValues=new int[8];
@@ -30,7 +30,7 @@ public class Runner
 			}
 			for(int j=0; j< Reader.individualInt.length;j++)
 			{
-				if(!doubleValues[j]==Reader.individualInt[j])
+				if(!(doubleValues[j]==Reader.individualInt[j]))
 				{
 					Reader.individualInt[j]=doubleValues[j];
 				}
