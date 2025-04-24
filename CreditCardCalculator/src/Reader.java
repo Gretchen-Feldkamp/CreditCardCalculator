@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 public class Reader {
 
+	static Scanner cardFile;
+	static String[] individualStr;
 	static int[] individualInt;
 	public static int[] readerMain()
 		{
-			System.out.println("hi");
 			try 
 			{
-			Scanner cardFile = new Scanner(new File("CreditCards.txt"));
-			String[] individualStr = cardFile.next().split("");
-			int[] individualInt = new int[individualStr.length];
-			for(int i=0; i<individualStr[i].length()+1;i++)
+			cardFile = new Scanner(new File("CreditCards.txt"));
+			individualStr = cardFile.next().split("");
+			individualInt = new int[individualStr.length];
+			for(int i=0; i<individualStr[i].length();i++)
 				{
 			individualInt[i] = Integer.parseInt(individualStr[i]);
-			System.out.println("hi");
 
 				}
 			}
